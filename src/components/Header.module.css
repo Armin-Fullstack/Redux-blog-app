@@ -1,0 +1,17 @@
+
+.header {
+  background-color: #be4bdb;
+  padding: 2rem 0 0 0;
+}
+.headerContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+}
+.headerTitle {
+  font-size: 4.5rem;
+  color: white;
+  text-align: left;
+  margin-bottom: 3rem
+}

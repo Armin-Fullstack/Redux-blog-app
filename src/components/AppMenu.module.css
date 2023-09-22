@@ -1,0 +1,20 @@
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBarMenu {
+  display: flex;
+  gap: 2rem;
+}
+.navBarMenu li {
+  font-size: 1.5rem;
+  background-color:#6741d9;
+  color: white;
+  padding: 0.9rem 3rem 4rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  height: 100%;
+}

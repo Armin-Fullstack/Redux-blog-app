@@ -1,0 +1,51 @@
+
+ .form {
+  width: 100%;
+  padding: 2rem 0; 
+  gap: 2rem;
+ }
+
+ .formTitle {
+  font-size: 3rem;
+  color: #343a40;
+  margin-bottom: 2rem;
+ }
+
+ .groupInput{
+  margin-bottom: 1.7rem;
+ }
+
+ .groupInput label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #495057;
+ }
+ .groupInput input{
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ced4da;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+ }
+
+ .groupInput input::placeholder {
+  color: #adb5bd;
+  font-size: 1.7rem;
+ }
+
+ .authorSelect {
+  width: 100%;
+  border: 1px solid #ced4da;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+ }
+
+ .groupInput textarea {
+  width: 100%;
+  border: 1px solid #ced4da;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: #343a40;
+ }

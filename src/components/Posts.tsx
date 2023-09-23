@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Post from "./Post";
 import styles from "./Posts.module.css"
 
 const posts = [
@@ -25,33 +25,10 @@ const posts = [
 
 
 export default function Posts():JSX.Element {
-  
   return(
     <div className={styles.posts}>
       <h2 className={styles.postsTitle}>Posts</h2>
-      <div className={styles.post}>
-        <h3></h3>
-        <p></p>
-        <p></p>
-        <div>
-          <div>
-            <span>👍</span><p>0</p>
-          </div>
-          <div>
-            <span>🎉</span><p>0</p>
-          </div>
-          <div>
-            <span>❤️</span><p>0</p>
-          </div>
-          <div>
-            <span>🚀</span><p>0</p>
-          </div>
-          <div>
-            <span>👀</span><p>0</p>
-          </div>
-        </div>
-        <Button>View Post</Button>
-      </div>
+      {posts.map(post => <Post title={post.title} author={post.author} content={post.content} key={post.id}/>)}
     </div>
   )
 }

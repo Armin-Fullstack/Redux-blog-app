@@ -1,12 +1,18 @@
-import { Link } from "react-router-dom";
-import styles from "./Post.module.css"
+import { useSelector } from "react-redux"
+import { useParams } from "react-router-dom";
+import styles from "./SinglePostPage.module.css"
 
-export default function Post({title , author , content, id}): JSX.Element {
+export default function SinglePostPage(): JSX.Element {
+  const {id} = useParams()
+  const posts = useSelector(state => state.posts.find((post) => post.id === id))
+  
   return(
-    <div className="post">
-        <h3 className="postTitle">{title}</h3>
-        <p className="postAuthor">by {author} about </p>
-        <p className="postContent">{content}</p>
+    <section className={styles.singlePostPage}>
+    <div className="container">
+     <div className="post">
+        <h3 className="postTitle">{posts.title}</h3>
+        <p className="postAuthor">by {posts.author} about </p>
+        <p className="postContent">{posts.content}</p>
         <div className="emojiContainer">
           <div className="emojiRate">
             <span className="emoji">👍</span><p className="number">0</p>
@@ -24,7 +30,9 @@ export default function Post({title , author , content, id}): JSX.Element {
             <span className="emoji">👀</span><p className="number">0</p>
           </div>
         </div>
-        <Link className={styles.viewPostBtn} to={`/posts/${id}`}>View Post</Link>
+      <button className={styles.editPostBtn}>Edit</button>
       </div>
+    </div>
+    </section>
   )
 }

@@ -3,7 +3,7 @@ import Posts from "./Posts";
 
 export default function MainFeed(): JSX.Element {
   return (
-    <main>
+    <main style={{padding: "3rem 0"}}>
       <div className="container">
         <Form />
         <Posts />

@@ -1,0 +1,12 @@
+
+.editPostBtn {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.singlePostPage {
+  padding: 3rem 0
+}

@@ -3,6 +3,7 @@
   padding: 0;
   list-style-type: none;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
@@ -16,4 +17,60 @@ body {
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+
+.emojiContainer {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.emojiRate {
+  display: flex;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.emojiRate .number {
+  font-size: 1.5rem;
+  color: #343a40;
+}
+
+.emojiRate .emoji {
+  font-size: 1.5rem;
+}
+
+
+.post {
+  border: 1px solid #adb5bd;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.postTitle {
+  color: #495057;
+  font-size: 1rem;
+}
+.post h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.postAuthor {
+  font-size: 1.2rem;
+  color: #495057;
+  margin-bottom: 2.3rem;
+}
+
+.postContent {
+  color: #495057;
+  margin-bottom: 2.8rem;
+  font-size: 1.9rem;
+}
+.post:not(:last-child) {
+  margin-bottom: 3rem;
 }

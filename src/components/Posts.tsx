@@ -7,7 +7,7 @@ export default function Posts():JSX.Element {
   return(
     <div className={styles.posts}>
       <h2 className={styles.postsTitle}>Posts</h2>
-      {posts.map(post => <Post title={post.title} author={post.author} content={post.content} key={post.id}/>)}
+      {posts.map(post => <Post title={post.title} author={post.author} content={post.content} id={post.id} key={post.id}/>)}
     </div>
   )
 }

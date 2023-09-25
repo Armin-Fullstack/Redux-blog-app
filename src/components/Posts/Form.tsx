@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Button from "./Button";
 import styles from "./Form.module.css"
 import { useDispatch } from "react-redux";
-import { postAdded } from "../features/posts/postsSlice";
 import { nanoid } from "@reduxjs/toolkit";
+import { postAdded } from "../../features/posts/postsSlice";
+import Button from "../Button/Button";
 
 export default function Form():JSX.Element {
   const [title , setTitle] = useState<string>("")
@@ -29,11 +29,11 @@ export default function Form():JSX.Element {
   return(
     <form className={styles.form} onSubmit={handleSubmit}>
       <h2 className={styles.formTitle}>Add a New Post</h2>
-      <div className={styles.groupInput}>
+      <div className="groupInput">
         <label>Post Title:</label>
         <input type="text" placeholder="What's in your mind?" value={title} onChange={(e) => setTitle(e.target.value)}/>
       </div>
-      <div className={styles.groupInput}>
+      <div className="groupInput">
         <label>Author:</label>
         <select className={styles.authorSelect} value={author} onChange={(e) => setAuthor(e.target.value)}>
           <option value="Armin">Armin</option>
@@ -41,7 +41,7 @@ export default function Form():JSX.Element {
           <option value="Hooshang">Hooshang</option>
         </select>
       </div>
-      <div className={styles.groupInput}>
+      <div className="groupInput">
         <label>Content:</label>
         <textarea value={content} onChange={(e) => setContent(e.target.value)} />
       </div>

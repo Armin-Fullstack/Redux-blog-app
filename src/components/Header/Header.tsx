@@ -1,4 +1,4 @@
-import AppMenu from "./AppMenu";
+import AppMenu from "../AppMenu/AppMenu"
 import styles from "./Header.module.css"
 export default function Header():JSX.Element {
   return(

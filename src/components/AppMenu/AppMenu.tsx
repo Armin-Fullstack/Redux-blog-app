@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../Button/Button"
 import styles from "./AppMenu.module.css"
 export default function AppMenu():JSX.Element {
   return(

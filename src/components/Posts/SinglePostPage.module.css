@@ -1,0 +1,15 @@
+
+.editPostBtn:link , .editPostBtn:visited {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #868e96;
+  color: #343a40;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-align: center;
+}
+.singlePostPage {
+  padding: 3rem 0
+}

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { useParams } from "react-router-dom";
+import { useParams , Link } from "react-router-dom";
 import styles from "./SinglePostPage.module.css"
 
 export default function SinglePostPage(): JSX.Element {
@@ -30,7 +30,7 @@ export default function SinglePostPage(): JSX.Element {
             <span className="emoji">👀</span><p className="number">0</p>
           </div>
         </div>
-      <button className={styles.editPostBtn}>Edit</button>
+      <Link to={`/editPost/${id}`} className={styles.editPostBtn}>Edit</Link>
       </div>
     </div>
     </section>

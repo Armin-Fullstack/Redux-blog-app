@@ -1,5 +1,6 @@
-import Form from "./Form";
-import Posts from "./Posts";
+import Form from "./Posts/Form";
+import Posts from "./Posts/Posts";
+
 
 export default function MainFeed(): JSX.Element {
   return (

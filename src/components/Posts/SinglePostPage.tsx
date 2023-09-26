@@ -3,43 +3,24 @@ import { useParams, Link } from "react-router-dom";
 import styles from "./SinglePostPage.module.css";
 import { selectUserById } from "../../features/users/usersSlice";
 import TimeAgo from "./TimeAgo";
+import ReactionButtons from "../Button/ReactionButtons";
 
 export default function SinglePostPage(): JSX.Element {
   const { id } = useParams();
-  const { title, userId, content, createdAt } = useSelector((state) => state.posts.find((post) => post.id === id));
-  const { name } = useSelector((store) => selectUserById(store, userId));
+  const post = useSelector((state) => state.posts.find((post) => post.id === id));
+  const { name } = useSelector((store) => selectUserById(store, post.userId));
 
   return (
     <section className={styles.singlePostPage}>
       <div className="container">
         <div className="post">
-          <h3 className="postTitle">{title}</h3>
+          <h3 className="postTitle">{post.title}</h3>
           <p className="postAuthor">
-            by {name} about <TimeAgo timestamp={createdAt} />
+            by {name} about <TimeAgo timestamp={post.createdAt} />
           </p>
-          <p className="postContent">{content}</p>
-          <div className="emojiContainer">
-            <div className="emojiRate">
-              <span className="emoji">👍</span>
-              <p className="number">0</p>
-            </div>
-            <div className="emojiRate">
-              <span className="emoji">🎉</span>
-              <p className="number">0</p>
-            </div>
-            <div className="emojiRate">
-              <span className="emoji">❤️</span>
-              <p className="number">0</p>
-            </div>
-            <div className="emojiRate">
-              <span className="emoji">🚀</span>
-              <p className="number">0</p>
-            </div>
-            <div className="emojiRate">
-              <span className="emoji">👀</span>
-              <p className="number">0</p>
-            </div>
-          </div>
+          <p className="postContent">{post.content}</p>
+
+          {<ReactionButtons post={post} />}
           <Link to={`/editPost/${id}`} className={styles.editPostBtn}>
             Edit
           </Link>

@@ -27,6 +27,7 @@ export default function Form(): JSX.Element {
       content,
       userId: author,
       createdAt: new Date().toISOString(),
+      reactions: { thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0 },
     };
     if (!title || !content || !author) return;
     dispatch(postAdded(newPost));

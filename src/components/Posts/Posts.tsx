@@ -8,7 +8,7 @@ export default function Posts(): JSX.Element {
     <div className={styles.posts}>
       <h2 className={styles.postsTitle}>Posts</h2>
       {posts.map((post) => (
-        <Post title={post.title} userId={post.userId} content={post.content} id={post.id} key={post.id} />
+        <Post title={post.title} userId={post.userId} content={post.content} createdAt={post.createdAt} id={post.id} key={post.id} />
       ))}
     </div>
   );

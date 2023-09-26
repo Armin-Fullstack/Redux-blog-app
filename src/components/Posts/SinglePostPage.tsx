@@ -1,38 +1,47 @@
-import { useSelector } from "react-redux"
-import { useParams , Link } from "react-router-dom";
-import styles from "./SinglePostPage.module.css"
+import { useSelector } from "react-redux";
+import { useParams, Link } from "react-router-dom";
+import styles from "./SinglePostPage.module.css";
+import { selectUserById } from "../../features/users/usersSlice";
 
 export default function SinglePostPage(): JSX.Element {
-  const {id} = useParams()
-  const posts = useSelector(state => state.posts.find((post) => post.id === id))
-  
-  return(
+  const { id } = useParams();
+  const { title, userId, content } = useSelector((state) => state.posts.find((post) => post.id === id));
+  const { name } = useSelector((store) => selectUserById(store, userId));
+
+  return (
     <section className={styles.singlePostPage}>
-    <div className="container">
-     <div className="post">
-        <h3 className="postTitle">{posts.title}</h3>
-        <p className="postAuthor">by {posts.author} about </p>
-        <p className="postContent">{posts.content}</p>
-        <div className="emojiContainer">
-          <div className="emojiRate">
-            <span className="emoji">👍</span><p className="number">0</p>
+      <div className="container">
+        <div className="post">
+          <h3 className="postTitle">{title}</h3>
+          <p className="postAuthor">by {name} about </p>
+          <p className="postContent">{content}</p>
+          <div className="emojiContainer">
+            <div className="emojiRate">
+              <span className="emoji">👍</span>
+              <p className="number">0</p>
+            </div>
+            <div className="emojiRate">
+              <span className="emoji">🎉</span>
+              <p className="number">0</p>
+            </div>
+            <div className="emojiRate">
+              <span className="emoji">❤️</span>
+              <p className="number">0</p>
+            </div>
+            <div className="emojiRate">
+              <span className="emoji">🚀</span>
+              <p className="number">0</p>
+            </div>
+            <div className="emojiRate">
+              <span className="emoji">👀</span>
+              <p className="number">0</p>
+            </div>
           </div>
-          <div className="emojiRate">
-            <span className="emoji">🎉</span><p className="number">0</p>
-          </div>
-          <div className="emojiRate">
-            <span className="emoji">❤️</span><p className="number">0</p>
-          </div>
-          <div className="emojiRate">
-            <span className="emoji">🚀</span><p className="number">0</p>
-          </div>
-          <div className="emojiRate">
-            <span className="emoji">👀</span><p className="number">0</p>
-          </div>
+          <Link to={`/editPost/${id}`} className={styles.editPostBtn}>
+            Edit
+          </Link>
         </div>
-      <Link to={`/editPost/${id}`} className={styles.editPostBtn}>Edit</Link>
       </div>
-    </div>
     </section>
-  )
+  );
 }

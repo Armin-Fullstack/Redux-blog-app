@@ -1,20 +1,18 @@
-
- .form {
+.form {
   width: 100%;
-  padding: 2rem 0; 
+  padding: 2rem 0;
   gap: 2rem;
- }
+}
 
- .formTitle {
+.formTitle {
   font-size: 3rem;
   color: #343a40;
   margin-bottom: 2rem;
- }
+}
 
- .authorSelect {
+.authorSelect {
   width: 100%;
   border: 1px solid #ced4da;
   padding: 1.5rem;
   border-radius: 0.5rem;
- }
-
+}

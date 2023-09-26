@@ -10,7 +10,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: sans-serif
+  font-family: sans-serif;
 }
 
 .container {
@@ -18,7 +18,6 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 
 .emojiContainer {
   display: flex;
@@ -43,7 +42,6 @@ body {
 .emojiRate .emoji {
   font-size: 1.5rem;
 }
-
 
 .post {
   border: 1px solid #adb5bd;
@@ -75,34 +73,34 @@ body {
   margin-bottom: 3rem;
 }
 
-.groupInput{
+.groupInput {
   margin-bottom: 1.7rem;
- }
+}
 
- .groupInput label {
+.groupInput label {
   display: inline-block;
   margin-bottom: 1rem;
   font-size: 1.7rem;
   color: #495057;
- }
- .groupInput input{
+}
+.groupInput input {
   display: block;
   width: 100%;
   outline: none;
   border: 1px solid #ced4da;
   padding: 1.5rem;
   border-radius: 0.5rem;
- }
+}
 
- .groupInput input::placeholder {
+.groupInput input::placeholder {
   color: #adb5bd;
   font-size: 1.7rem;
- }
+}
 
- .groupInput textarea {
+.groupInput textarea {
   width: 100%;
   border: 1px solid #ced4da;
   padding: 1.5rem;
   border-radius: 0.5rem;
   color: #343a40;
- }
+}

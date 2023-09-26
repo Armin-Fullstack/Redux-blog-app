@@ -1,5 +1,5 @@
-
-.editPostBtn:link , .editPostBtn:visited {
+.editPostBtn:link,
+.editPostBtn:visited {
   outline: none;
   border: none;
   cursor: pointer;
@@ -11,5 +11,5 @@
   text-align: center;
 }
 .singlePostPage {
-  padding: 3rem 0
+  padding: 3rem 0;
 }

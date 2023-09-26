@@ -1,6 +1,5 @@
-
-
-.viewPostBtn:link , .viewPostBtn:visited {
+.viewPostBtn:link,
+.viewPostBtn:visited {
   border: 1px solid #343a40;
   color: #495057;
   width: 15rem;
